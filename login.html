@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>German Bank</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 20px;
+            background-color: #333;
+            color: #fff;
+        }
+        h1, h2 {
+            color: #ff4500;
+        }
+        section {
+            border: 2px solid #666;
+            padding: 10px;
+            margin-bottom: 20px;
+            background-color: #555;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+            color: #ff4500;
+        }
+        input, button {
+            padding: 8px;
+            margin-bottom: 10px;
+        }
+        button {
+            background-color: #ff4500;
+            color: #fff;
+            cursor: pointer;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        span {
+            color: #ff4500;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>German Bank</h1>
+ 
+    <section id="kundendaten">
+        <h2>Kundendaten</h2>
+        <p>IBAN: <span id="iban">DE12345678901234567890</span></p>
+        <p>Kundennummer: <span id="kundennummer">123456</span></p>
+        <p>Kartennummer: <span id="kartennummer">**** **** **** 1234</span></p>
+    </section>
+ 
+    <section id="verlauf">
+        <h2>Verlauf</h2>
+        <ul id="transaktionsverlauf">
+            <!-- Hier werden die Transaktionen angezeigt -->
+        </ul>
+    </section>
+ 
+    <section id="passwort">
+        <h2>Passwort ändern</h2>
+        <form>
+            <label for="passwort">Neues Passwort:</label>
+            <input type="password" id="passwort" name="passwort" placeholder="Passwort eingeben" required>
+            <button type="button" onclick="maskierePasswort()">Passwort anzeigen</button>
+        </form>
+    </section>
+ 
+    <section id="aktien">
+        <h2>Aktien und Investment</h2>
+        <p>Hier könnte eine Übersicht über Aktien und Investments angezeigt werden.</p>
+    </section>
+ 
+    <section id="ueberweisung">
+        <h2>Geld überweisen</h2>
+        <form>
+            <label for="zielIBAN">Ziel-IBAN:</label>
+            <input type="text" id="zielIBAN" name="zielIBAN" placeholder="Ziel-IBAN eingeben" required>
+            <label for="betrag">Betrag:</label>
+            <input type="number" id="betrag" name="betrag" placeholder="Betrag eingeben" required>
+            <button type="button" onclick="ueberweisen()">Überweisen</button>
+        </form>
+    </section>
+ 
+    <section id="umsatzverlauf">
+        <h2>Umsatzverlauf</h2>
+        <ul id="umsatzverlaufListe">
+            <!-- Hier wird der Umsatzverlauf angezeigt -->
+        </ul>
+    </section>
+ 
+    <script>
+        function maskierePasswort() {
+            var passwortInput = document.getElementById('passwort');
+            passwortInput.type = (passwortInput.type === 'password') ? 'text' : 'password';
+        }
+ 
+        function ueberweisen() {
+            // Hier könnte die Logik für die Geldüberweisung implementiert werden
+        }
+    </script>
+</body>
+</html>
+ 
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Startseite - German Bank</title>
+</head>
+<body>
+    <h1>Willkommen bei German Bank</h1>
+ 
+    <!-- Hier füge den Hyperlink zur Login-Seite hinzu -->
+    <a href="Login Seite">Zum Login</a>
+ 
+</body>
+</html>
