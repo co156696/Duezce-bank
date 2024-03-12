@@ -3,91 +3,95 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <title>Bank Startseite</title>
     <style>
-        /* Stil für das Formular */
         body {
             font-family: Arial, sans-serif;
             margin: 0;
             padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #f0f0f0;
+            background-color: #f2f2f2;
         }
-        form {
-            background-color: #fff;
-            padding: 30px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            max-width: 400px;
-            width: 100%;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-            color: #007bff;
-        }
-        input[type="text"], input[type="password"] {
-            width: 100%;
-            padding: 12px;
-            margin: 10px 0;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            width: 100%;
+        header {
             background-color: #007bff;
-            color: #fff;
-            border: none;
-            padding: 12px;
-            border-radius: 5px;
-            cursor: pointer;
-            transition: background-color 0.3s;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
         }
-        input[type="submit"]:hover {
+        nav {
+            display: flex;
+            justify-content: space-around;
             background-color: #0056b3;
+            padding: 10px 0;
         }
-        .forgot-password, .forgot-username {
-            margin-top: 10px;
-            text-align: center;
-        }
-        a {
-            color: #007bff;
+        nav a {
+            color: white;
             text-decoration: none;
+            padding: 10px 20px;
         }
-        a:hover {
-            text-decoration: underline;
-        }
-        .links {
-            margin-top: 20px;
+        main {
+            padding: 20px;
             text-align: center;
         }
-        .links a {
-            display: block;
-            margin-bottom: 10px;
+        footer {
+            background-color: #007bff;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+        .icon {
+            width: 50px;
+            height: 50px;
+            margin: 10px;
         }
     </style>
 </head>
 <body>
-    <form action="startseite.html" method="post">
-        <h2>{ } Name und Logo der Bank</h2>
-        <input type="text" name="username" placeholder="Benutzername oder E-Mail-Adresse" required>
-        <input type="password" name="password" placeholder="Passwort" required>
-        <input type="submit" value="Login">
-        <div class="forgot-password">
-            <a href="#">Passwort vergessen?</a>
-        </div>
-        <div class="forgot-username">
-            <a href="#">Benutzername vergessen?</a>
-        </div>
-        <div class="links">
-            <a href="#">Alternative Login mit Face ID</a>
-            <a href="#">Apple Wallet Funktion</a>
-            <a href="Login Seite">Zum Login</a>
-        </div>
-    </form>
+    <header>
+        <!-- Logo der Bank -->
+        <img src="logo.png" alt="Bank Logo">
+        
+        <!-- Ansprechpartner -->
+        <p>Ansprechpartner: Max Mustermann</p>
+        
+        <!-- Navigation -->
+        <nav>
+            <!-- Links im Header -->
+            <a href="hilfe.html"><img class="icon" src="hilfe-icon.png" alt="Hilfe"></a>
+            <a href="profil.html"><img class="icon" src="profil-icon.png" alt="Profil"></a>
+            <a href="postfach.html"><img class="icon" src="postfach-icon.png" alt="Postfach"></a>
+            <a href="agb.html"><img class="icon" src="agb-icon.png" alt="AGB"></a>
+            <a href="login.html">Anmelden</a> <!-- Link zum Anmelden -->
+        </nav>
+    </header>
+    
+    <main>
+        <!-- Kontenübersicht Icon -->
+        <a href="kontenuebersicht.html"><img class="icon" src="kontenuebersicht-icon.png" alt="Kontenübersicht"></a>
+
+        <!-- Button für Überweisung -->
+        <button onclick="window.location.href='ueberweisung.html'">Überweisung ausführen</button>
+    </main>
+    
+    <footer>
+        <!-- Social Media -->
+        <p>Folgen Sie uns auf: 
+            <a href="https://twitter.com/bank" target="_blank">Twitter</a>, 
+            <a href="https://facebook.com/bank" target="_blank">Facebook</a>
+        </p>
+        
+        <!-- Hyperlink zur Bank Homepage -->
+        <p><a href="https://www.bank.de" target="_blank">www.bank.de</a></p>
+        
+        <!-- Geschäftsführer -->
+        <p>Geschäftsführer: Max Mustermann</p>
+        
+        <!-- Geschäftsadresse -->
+        <p>Geschäftsadresse: Musterstraße 123, 12345 Musterstadt</p>
+    </footer>
 </body>
 </html>
+
+
