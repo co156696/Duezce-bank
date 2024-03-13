@@ -1,61 +1,30 @@
+<!--HTML-Grundgerüst über die Eingabe von html und dann html:5 auswählen-->
 <!DOCTYPE html>
-<html lang="de">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bank Login</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #f2f2f2;
-            margin: 0;
-            padding: 0;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-        }
-        .container {
-            background-color: white;
-            padding: 20px;
-            border-radius: 5px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            width: 300px;
-        }
-        h2 {
-            text-align: center;
-            margin-bottom: 20px;
-        }
-        input[type="text"],
-        input[type="password"],
-        input[type="submit"] {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 3px;
-            box-sizing: border-box;
-        }
-        input[type="submit"] {
-            background-color: #007bff;
-            color: white;
-            cursor: pointer;
-        }
-        input[type="submit"]:hover {
-            background-color: #0056b3;
-        }
-    </style>
+    <link rel="stylesheet" href="styles.css">
+    <!--Der Titel steht im Browsertab-->
+    <title>Borken-Bank - Login</title>
 </head>
 <body>
-    <div class="container">
-        <h2>Bank Login</h2>
-        <form action="login.php" method="post">
-            <label for="username">Benutzername:</label>
-            <input type="text" id="username" name="username" required>
-            <label for="password">Passwort:</label>
-            <input type="password" id="password" name="password" required>
-            <input type="submit" value="Anmelden">
-        </form>
-    </div>
+    <!--Der haeder soll die Seite strukturieren und bekommt entsprechende Styles zugwiesen-->
+    <header>
+        <!--Überschrift der Seite-->
+        <h1>Herzlich Willkommen bei der Borken-Bank</h1>
+    </header>
+    <!--Formularfelder (Textboxen, Button etc.) müssen in form-Tags eingebettet werden-->
+    <form>
+        <!--Die Labels beschreiben die Textboxen. br bricht die Zeile um.-->
+        <label>Benutzername</label><br>
+        <input><br>
+        <label>Kennwort</label><br>
+        <input type="password"><br>
+        <button>Einloggen</button>
+    </form>
+    <footer>
+        &#169; 2024 Borken-Bank AG
+    </footer>
 </body>
 </html>
